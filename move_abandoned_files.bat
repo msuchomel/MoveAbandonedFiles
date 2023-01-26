@@ -14,8 +14,8 @@ set count=0
 set  "bar_perc=0%%  10%%  20%%  30%%  40%%  50%%  60%%  70%%  80%%  90%%  100%%"
 set "bar_scale=|....|....|....|....|....|....|....|....|....|....|"
 
-FOR /f "tokens=1,2 delims=," %%i in (file_list.csv) DO set /a total+=1
-FOR /f "tokens=1,2 delims=," %%i in (file_list.csv) DO call :move_file "%%~i" "%%~j"
+FOR /f "tokens=1,2 delims=" %%i in (file_list.csv) DO set /a total+=1
+FOR /f "tokens=1,2 delims=" %%i in (file_list.csv) DO call :move_file "%%~i" "%%~j"
 ECHO Finished
 Pause >NUL
 
